@@ -37,12 +37,6 @@ function Nav({ onShowForm }) {
 									className="nav-link page-scroll d-flex flex-row align-items-center text-primary"
 									onClick={onShowForm}
 								>
-									<em
-										data-feather="layout"
-										width="18"
-										height="18"
-										className="mr-2"
-									></em>
 									Join Waitlist
 								</a>
 							</li>
