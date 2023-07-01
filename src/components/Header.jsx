@@ -4,7 +4,7 @@ import Button from './Button.jsx';
 import Form from './Form.jsx';
 
 // Header Component
-function Header({isFormOpen, onShowForm}) {
+function Header({ isFormOpen, onShowForm }) {
 
 	return (
 		<section className="py-7 py-md-0 bg-hero" id="home">
@@ -18,10 +18,15 @@ function Header({isFormOpen, onShowForm}) {
 							hotbox is doordash for cannabis. Get delivery from your favorite
 							dispensaries near you today!
 						</p>
-						{isFormOpen === false ? <Button onClick={onShowForm}>
-							Join waitlist
-							<em className="ml-2" data-feather="arrow-right"></em>
-						</Button> : <Form />}
+						{isFormOpen === false ?
+							<div>
+								<Button onClick={onShowForm}>
+									Join waitlist
+									<em className="ml-2" data-feather="arrow-down"></em>
+								</Button>
+								<br />
+								<small>serving Maryland only</small>
+							</div> : <Form />}
 					</div>
 				</div>
 			</div>

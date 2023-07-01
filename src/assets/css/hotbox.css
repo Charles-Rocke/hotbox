@@ -1,3 +1,7 @@
 .label-div{
 	text-align: left !important;
 }
+
+a{
+	cursor: pointer;
+}

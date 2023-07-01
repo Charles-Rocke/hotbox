@@ -20,7 +20,7 @@ export default function App() {
 
 	return (
 		<main>
-			<Nav />
+			<Nav onShowForm={setShowForm}/>
 			{/* Header controls form display */}
 			<Header onShowForm={setShowForm} isFormOpen={showForm}/>
 		</main>

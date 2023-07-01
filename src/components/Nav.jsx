@@ -1,7 +1,14 @@
+import { useState } from 'react';
 import '../assets/css/default.css';
 
 // Nav component
-function Nav() {
+function Nav({ onShowForm }) {
+	const [showContact, setShowContact] = useState(false);
+	// show contact info handle
+	function handleShowContact(){
+		setShowContact((show) => !show);
+	}
+	
 	return (
 		<section className="smart-scroll">
 			<div className="container-fluid">
@@ -21,12 +28,12 @@ function Nav() {
 					<div className="collapse navbar-collapse" id="navbarCollapse">
 						<ul className="navbar-nav ml-auto">
 							<li className="nav-item">
-								<a className="nav-link page-scroll" href="#Contact">Contact</a>
+								<a className="nav-link page-scroll" href="#Contact" onClick={handleShowContact}>{showContact ? "443-373-6564" : "Contact us"}</a>
 							</li>
 							<li className="nav-item">
 								<a
 									className="nav-link page-scroll d-flex flex-row align-items-center text-primary"
-									href="#"
+									onClick={onShowForm}
 								>
 									<em
 										data-feather="layout"
