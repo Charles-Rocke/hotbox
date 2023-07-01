@@ -11,16 +11,21 @@ function Form() {
 	const [city, setCity] = useState("");
 	
 	// form submission handle
-	function handleSubmit(e) {
-		e.preventDefault();
-		setEmail("");
-		setName("");
-		setCity("");
-		
-		// if (!bill || !paidByUser) return;
-		// onSplitBill(whoIsPaying === "user" ? paidByFriend : -paidByUser);
-		// console.log(whoIsPaying); 
-	}
+	/* Here’s the juicy bit for posting the form submission */
+
+    handleSubmit = e => {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "waitlist v1", ...this.state })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+
+      e.preventDefault();
+    };
+
+    handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
 	return (
 		<section className="py-md-0 bg-hero" id="home">
@@ -32,21 +37,18 @@ function Form() {
 						<input type="hidden" name="waitlist v1" value="waitlist v1" />
 						
 						<div className="mb-3 label-div">
-							<label className="form-label">Your name
-								<input id="name" name="name" value={name} onChange={(event) => setName(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your name" />
-							</label>
+							<label htmlFor="name" className="form-label">Your name</label>
+							<input id="name" name="name" value={name} onChange={(event) => setName(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your name" />
 						</div>
 
 						<div className="mb-3 label-div">
-							<label className="form-label">Email address
-								<input id="email" name="email" value={email} onChange={(event) => setEmail(event.target.value)} type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-							</label>
+							<label htmlFor="email" className="form-label">Email address</label>
+							<input id="email" name="email" value={email} onChange={(event) => setEmail(event.target.value)} type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
 						</div>
 
 						<div className="mb-3 label-div">
-							<label className="form-label">Your City
-								<input id="city" name="city" value={city} onChange={(event) => setCity(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your city" />
-							</label>
+							<label htmlFor="city" className="form-label">Your City</label>
+							<input id="city" name="city" value={city} onChange={(event) => setCity(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your city" />
 						</div>
 						
 						<Button type="submit" onClick={handleSubmit}>
