@@ -33,7 +33,7 @@ function Form() {
 							<label for="exampleFormControlInput1" className="form-label">Your City</label>
 							<input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your city" />
 						</div>
-						<Button>
+						<Button type="submit">
 							Join waitlist
 							<em className="ml-2" data-feather="arrow-right"></em>
 						</Button>

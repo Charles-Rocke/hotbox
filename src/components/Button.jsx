@@ -1,9 +1,9 @@
 import '../assets/css/default.css';
 
 // Button component
-function Button({ children, onClick }) {
+function Button({ children, onClick, type}) {
   return (
-    <button className="btn btn-primary d-inline-flex flex-row align-items-center" onClick={onClick}>
+    <button type={type} className="btn btn-primary d-inline-flex flex-row align-items-center" onClick={onClick}>
       {children}
     </button>
   );
