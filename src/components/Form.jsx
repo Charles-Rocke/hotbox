@@ -11,7 +11,7 @@ function Form() {
 		
 		// if (!bill || !paidByUser) return;
 		// onSplitBill(whoIsPaying === "user" ? paidByFriend : -paidByUser);
-		// console.log(whoIsPaying);
+		// console.log(whoIsPaying); 
 	}
 
 	return (
