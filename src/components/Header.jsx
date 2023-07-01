@@ -22,7 +22,7 @@ function Header({ isFormOpen, onShowForm }) {
 							<div>
 								<Button onClick={onShowForm}>
 									Join waitlist
-									<em className="ml-2" data-feather="arrow-down"></em>
+									<em className="ml-2"><img src="/src/assets/images/arrow-down.svg" alt="menu"></img></em>
 								</Button>
 								<br />
 							</div> : <Form />}

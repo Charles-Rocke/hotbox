@@ -5,10 +5,10 @@ import '../assets/css/default.css';
 function Nav({ onShowForm }) {
 	const [showContact, setShowContact] = useState(false);
 	// show contact info handle
-	function handleShowContact(){
+	function handleShowContact() {
 		setShowContact((show) => !show);
 	}
-	
+
 	return (
 		<section className="smart-scroll">
 			<div className="container-fluid">
@@ -23,7 +23,7 @@ function Nav({ onShowForm }) {
 						aria-expanded="false"
 						aria-label="Toggle navigation"
 					>
-						<span className="md-only" data-feather="grid"><img src="/src/assets/images/grid.svg" alt="menu"></img></span>
+						<img src="/src/assets/images/grid.svg" alt="menu"></img>
 					</button>
 					<div className="collapse navbar-collapse" id="navbarCollapse">
 						<ul className="navbar-nav ml-auto">
