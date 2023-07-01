@@ -5,9 +5,17 @@ import Button from './Button.jsx';
 
 // Form component
 function Form() {
+	// control state over input fields
+	const [email, setEmail] = useState("");
+	const [name, setName] = useState("");
+	const [city, setCity] = useState("");
+	
 	// form submission handle
 	function handleSubmit(e) {
 		e.preventDefault();
+		setEmail("");
+		setName("");
+		setCity("");
 		
 		// if (!bill || !paidByUser) return;
 		// onSplitBill(whoIsPaying === "user" ? paidByFriend : -paidByUser);
@@ -21,17 +29,17 @@ function Form() {
 					<form name="waitlist" method="POST" data-netlify="true" className="form-split-bill" onSubmit={handleSubmit}>
 						<div className="mb-3 label-div">
 							<label for="exampleFormControlInput1" className="form-label">Your name</label>
-							<input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your name" />
+							<input value={name} onChange={(event) => setName(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your name" />
 						</div>
 
 						<div className="mb-3 label-div">
 							<label for="exampleFormControlInput1" className="form-label">Email address</label>
-							<input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+							<input value={email} onChange={(event) => setEmail(event.target.value)} type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
 						</div>
 
 						<div className="mb-3 label-div">
 							<label for="exampleFormControlInput1" className="form-label">Your City</label>
-							<input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your city" />
+							<input value={city} onChange={(event) => setCity(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your city" />
 						</div>
 						<Button type="submit">
 							Join waitlist
