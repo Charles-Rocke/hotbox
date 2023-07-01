@@ -5,3 +5,8 @@
 a{
 	cursor: pointer;
 }
+
+/* h4 MD only */
+.md-only{
+	color: #1de9b6 !important;
+}

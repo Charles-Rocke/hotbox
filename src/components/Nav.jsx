@@ -23,12 +23,12 @@ function Nav({ onShowForm }) {
 						aria-expanded="false"
 						aria-label="Toggle navigation"
 					>
-						<span data-feather="grid"></span>
+						<span className="md-only" data-feather="grid"><img src="/src/assets/images/grid.svg" alt="menu"></img></span>
 					</button>
 					<div className="collapse navbar-collapse" id="navbarCollapse">
 						<ul className="navbar-nav ml-auto">
 							<li className="nav-item">
-								<a className="nav-link page-scroll" href="#Contact" onClick={handleShowContact}>{showContact ? "443-373-6564" : "Contact us"}</a>
+								<a className={showContact === true ? "nav-link page-scroll md-only" : "nav-link page-scroll"} href="#Contact" onClick={handleShowContact}>{showContact ? "443-373-6564" : "Contact us"}</a>
 							</li>
 							<li className="nav-item">
 								<a

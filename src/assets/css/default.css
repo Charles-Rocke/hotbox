@@ -3051,6 +3051,7 @@ input[type="button"].btn-block {
       align-items: center; }
 
 .navbar-toggler {
+	z-index:9999;
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;

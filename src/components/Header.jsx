@@ -16,7 +16,7 @@ function Header({ isFormOpen, onShowForm }) {
 						</h1>
 						<p className="lead py-3">
 							hotbox is doordash for cannabis. Get delivery from your favorite
-							dispensaries near you today!
+							dispensaries near you today! <p className="md-only">*Maryland residents only*</p>
 						</p>
 						{isFormOpen === false ?
 							<div>
@@ -25,7 +25,6 @@ function Header({ isFormOpen, onShowForm }) {
 									<em className="ml-2" data-feather="arrow-down"></em>
 								</Button>
 								<br />
-								<small>serving Maryland only</small>
 							</div> : <Form />}
 					</div>
 				</div>
