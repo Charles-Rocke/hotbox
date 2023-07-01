@@ -9,14 +9,14 @@ function Form() {
 	const [email, setEmail] = useState("");
 	const [name, setName] = useState("");
 	const [city, setCity] = useState("");
-	
+
 	// form submission handle
 	function handleSubmit(e) {
 		e.preventDefault();
 		setEmail("");
 		setName("");
 		setCity("");
-		
+
 		// if (!bill || !paidByUser) return;
 		// onSplitBill(whoIsPaying === "user" ? paidByFriend : -paidByUser);
 		// console.log(whoIsPaying); 
@@ -26,11 +26,11 @@ function Form() {
 		<section className="py-md-0 bg-hero" id="home">
 			<div className="container">
 				<div className="col-md-8 col-sm-10 col-12 mx-auto my-auto text-center">
-					
+
 					<form name="waitlist v1" method="POST">
-						
+
 						<input type="hidden" name="form-name" value="waitlist v1" />
-						
+
 						<div className="mb-3 label-div">
 							<label htmlFor="name" className="form-label">Your name</label>
 							<input id="name" name="name" value={name} onChange={(event) => setName(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your name" />
@@ -45,12 +45,10 @@ function Form() {
 							<label htmlFor="city" className="form-label">Your City</label>
 							<input id="city" name="city" value={city} onChange={(event) => setCity(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your city" />
 						</div>
-						
-						<Button type="submit" onClick={handleSubmit}>
-							Join waitlist
-							<em className="ml-2"></em>
-						</Button>
-						
+
+						<button type="submit" className="btn btn-primary d-inline-flex flex-row align-items-center">
+						</button><em className="ml-2"></em>
+
 					</form>
 				</div>
 			</div>
