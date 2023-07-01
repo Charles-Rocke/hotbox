@@ -11,30 +11,25 @@ function Form() {
 	const [city, setCity] = useState("");
 	
 	// form submission handle
-	/* Here’s the juicy bit for posting the form submission */
-
-    handleSubmit = e => {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "waitlist v1", ...this.state })
-      })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
-
-      e.preventDefault();
-    };
-
-    handleChange = e => this.setState({ [e.target.name]: e.target.value });
+	function handleSubmit(e) {
+		e.preventDefault();
+		setEmail("");
+		setName("");
+		setCity("");
+		
+		// if (!bill || !paidByUser) return;
+		// onSplitBill(whoIsPaying === "user" ? paidByFriend : -paidByUser);
+		// console.log(whoIsPaying); 
+	}
 
 	return (
 		<section className="py-md-0 bg-hero" id="home">
 			<div className="container">
 				<div className="col-md-8 col-sm-10 col-12 mx-auto my-auto text-center">
 					
-					<form name="waitlist v1" method="POST" data-netlify="true">
+					<form name="waitlist v1" method="POST">
 						
-						<input type="hidden" name="waitlist v1" value="waitlist v1" />
+						<input type="hidden" name="form-name" value="waitlist v1" />
 						
 						<div className="mb-3 label-div">
 							<label htmlFor="name" className="form-label">Your name</label>
