@@ -46,7 +46,7 @@ function Form() {
 							<input id="city" name="city" value={city} onChange={(event) => setCity(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your city" />
 						</div>
 						
-						<Button type="submit">
+						<Button type="submit" onClick={handleSubmit}>
 							Join waitlist
 							<em className="ml-2"></em>
 						</Button>
