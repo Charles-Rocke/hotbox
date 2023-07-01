@@ -21,7 +21,7 @@ function Form() {
 					<form name="waitlist" method="POST" data-netlify="true" className="form-split-bill" onSubmit={handleSubmit}>
 						<div className="mb-3 label-div">
 							<label for="exampleFormControlInput1" className="form-label">Your name</label>
-							<input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Enter your name" />
+							<input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your name" />
 						</div>
 
 						<div className="mb-3 label-div">
