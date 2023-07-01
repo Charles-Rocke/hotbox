@@ -28,6 +28,7 @@ function Nav({ onShowForm }) {
 					</button>
 					<div className="collapse navbar-collapse" id="navbarCollapse">
 						<ul className="navbar-nav ml-auto">
+							<br />
 							<li className="nav-item">
 								<a className={showContact === true ? "nav-link page-scroll md-only" : "nav-link page-scroll"} href="#Contact" onClick={handleShowContact}>{showContact ? "410-929-4532" : "Contact us"}</a>
 							</li>

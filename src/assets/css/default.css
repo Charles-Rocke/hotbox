@@ -7463,8 +7463,9 @@ body {
       box-shadow: none !important; }
 
 /*Navbar*/
-.navbar.navbar-transparent {
-  opacity: 2; }
+/* .navbar.navbar-transparent {
+  opacity: 2; 
+} */
 
 @media (max-width: 992px) {
   .navbar.navbar-transparent {
