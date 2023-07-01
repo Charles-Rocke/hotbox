@@ -32,18 +32,21 @@ function Form() {
 						<input type="hidden" name="waitlist v1" value="waitlist v1" />
 						
 						<div className="mb-3 label-div">
-							<label htmlFor="name" className="form-label">Your name</label>
-							<input id="name" name="name" value={name} onChange={(event) => setName(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your name" />
+							<label className="form-label">Your name
+								<input id="name" name="name" value={name} onChange={(event) => setName(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your name" />
+							</label>
 						</div>
 
 						<div className="mb-3 label-div">
-							<label htmlFor="email" className="form-label">Email address</label>
-							<input id="email" name="email" value={email} onChange={(event) => setEmail(event.target.value)} type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+							<label className="form-label">Email address
+								<input id="email" name="email" value={email} onChange={(event) => setEmail(event.target.value)} type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+							</label>
 						</div>
 
 						<div className="mb-3 label-div">
-							<label htmlFor="city" className="form-label">Your City</label>
-							<input id="city" name="city" value={city} onChange={(event) => setCity(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your city" />
+							<label className="form-label">Your City
+								<input id="city" name="city" value={city} onChange={(event) => setCity(event.target.value)} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your city" />
+							</label>
 						</div>
 						
 						<Button type="submit" onClick={handleSubmit}>
