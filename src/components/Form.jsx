@@ -18,7 +18,7 @@ function Form() {
 		<section className="py-md-0 bg-hero" id="home">
 			<div className="container">
 				<div className="col-md-8 col-sm-10 col-12 mx-auto my-auto text-center">
-					<form className="form-split-bill" onSubmit={handleSubmit}>
+					<form name="waitlist" method="POST" data-netlify="true" className="form-split-bill" onSubmit={handleSubmit}>
 						<div className="mb-3 label-div">
 							<label for="exampleFormControlInput1" className="form-label">Your name</label>
 							<input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Enter your name" />
