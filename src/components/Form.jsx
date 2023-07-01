@@ -27,7 +27,7 @@ function Form() {
 			<div className="container">
 				<div className="col-md-8 col-sm-10 col-12 mx-auto my-auto text-center">
 					
-					<form name="waitlist v1" method="POST" data-netlify="true" className="form-split-bill" onSubmit={handleSubmit}>
+					<form name="waitlist v1" method="POST" data-netlify="true">
 						
 						<input type="hidden" name="waitlist v1" value="waitlist v1" />
 						
