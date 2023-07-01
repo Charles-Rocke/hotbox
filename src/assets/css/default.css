@@ -7464,7 +7464,7 @@ body {
 
 /*Navbar*/
 .navbar.navbar-transparent {
-  opacity: 0.98; }
+  opacity: 2; }
 
 @media (max-width: 992px) {
   .navbar.navbar-transparent {
