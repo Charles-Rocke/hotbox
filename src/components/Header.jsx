@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '../assets/css/default.css';
 import Button from './Button.jsx';
 import Form from './Form.jsx';
+import arrowDown from "../assets/images/arrow-down.svg"
 
 // Header Component
 function Header({ isFormOpen, onShowForm }) {
@@ -22,7 +23,7 @@ function Header({ isFormOpen, onShowForm }) {
 							<div>
 								<Button onClick={onShowForm}>
 									Join waitlist
-									<em className="ml-2"><img src="/src/assets/images/arrow-down.svg" alt="menu"></img></em>
+									<em className="ml-2"><img src={arrowDown} alt="down"></img></em>
 								</Button>
 								<br />
 							</div> : <Form />}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../assets/css/default.css';
+import grid from "../assets/images/grid.svg"
 
 // Nav component
 function Nav({ onShowForm }) {
@@ -23,7 +24,7 @@ function Nav({ onShowForm }) {
 						aria-expanded="false"
 						aria-label="Toggle navigation"
 					>
-						<img src="/src/assets/images/grid.svg" alt="menu"></img>
+						<img src={grid} alt="menu"></img>
 					</button>
 					<div className="collapse navbar-collapse" id="navbarCollapse">
 						<ul className="navbar-nav ml-auto">
