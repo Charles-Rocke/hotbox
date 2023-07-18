@@ -36,7 +36,7 @@ function Form() {
 						{/* name field */}
 						<div className="mb-3 label-div">
 							<label htmlFor="name" className="form-label" for="name">Your name</label>
-							<input id="name" name="name" value={name} onChange={(event) => setName(event.target.value)} type="text" className="form-control" id="name" placeholder="Enter your name" required/>
+							<input name="name" value={name} onChange={(event) => setName(event.target.value)} type="text" className="form-control" id="name" placeholder="Enter your name" required/>
 						</div>
 
 						{/* email field */}
