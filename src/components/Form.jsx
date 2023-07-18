@@ -31,7 +31,7 @@ function Form() {
 
 					<form className="needs-validation" name="waitlist v2" method="POST" novalidate>
 
-						<input type="hidden" name="form-name" value="waitlist v1" />
+						<input type="hidden" name="form-name" value="waitlist v2" />
 
 						{/* name field */}
 						<div className="mb-3 label-div">
